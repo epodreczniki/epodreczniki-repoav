@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{650F5489-269A-423F-AAFB-EBA2F3051709}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSNC.RepoAV.RepDBAccess</RootNamespace>
+    <AssemblyName>RepDBAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataItems\DecimalT.cs" />
+    <Compile Include="DataItems\FormatData4Sync.cs" />
+    <Compile Include="DataItems\FormatGroupExt.cs" />
+    <Compile Include="DataItems\FormatLocation.cs" />
+    <Compile Include="DataItems\FormatSource.cs" />
+    <Compile Include="DataItems\FormatExt.cs" />
+    <Compile Include="DataItems\FormatWithProfileGroup.cs" />
+    <Compile Include="DataItems\Format.cs" />
+    <Compile Include="DataItems\GlobalDataItem.cs" />
+    <Compile Include="DataItems\FormatGroup.cs" />
+    <Compile Include="DataItems\Material.cs" />
+    <Compile Include="DataItems\MaterialAdd.cs" />
+    <Compile Include="DataItems\FormatMod.cs" />
+    <Compile Include="DataItems\MaterialMod.cs" />
+    <Compile Include="DataItems\MaterialMod4Portal.cs" />
+    <Compile Include="DataItems\NodeMod.cs" />
+    <Compile Include="DataItems\ProfileData4XML.cs" />
+    <Compile Include="DataItems\ProfileGroup.cs" />
+    <Compile Include="DataItems\Profile.cs" />
+    <Compile Include="DataItems\Node.cs" />
+    <Compile Include="DataItems\Statistics.cs" />
+    <Compile Include="DataItems\TaskContent.cs" />
+    <Compile Include="DataItems\TaskData.cs" />
+    <Compile Include="DataItems\Mime2Extension.cs" />
+    <Compile Include="DataItems\TaskTypeComplex.cs" />
+    <Compile Include="DataItems\TaskShort.cs" />
+    <Compile Include="DataItems\TaskAdd.cs" />
+    <Compile Include="DataItems\Task.cs" />
+    <Compile Include="DataItems\TaskCount.cs" />
+    <Compile Include="Enums\FormatInternalStatus.cs" />
+    <Compile Include="Enums\MaterialStatus.cs" />
+    <Compile Include="Enums\FormatStatus.cs" />
+    <Compile Include="Enums\FormatType.cs" />
+    <Compile Include="Enums\NodeMode.cs" />
+    <Compile Include="Enums\TaskStatus.cs" />
+    <Compile Include="Enums\NodeRole.cs" />
+    <Compile Include="Enums\MaterialType.cs" />
+    <Compile Include="Enums\TaskType.cs" />
+    <Compile Include="RepDBAccess_Format.cs" />
+    <Compile Include="RepDBAccess_FormatGroup.cs" />
+    <Compile Include="RepDBAccess_Node.cs" />
+    <Compile Include="RepDBAccess_Material.cs" />
+    <Compile Include="RepDBAccess_Profile.cs" />
+    <Compile Include="RepDBAccess_Task.cs" />
+    <Compile Include="RepDBAccess.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchItems\FormatSelector4IntStat.cs" />
+    <Compile Include="SearchItems\NumOfCopiesSelector.cs" />
+    <Compile Include="SearchItems\FormatSelector4Sync.cs" />
+    <Compile Include="SearchItems\MaterialSearch.cs" />
+    <Compile Include="SearchItems\MaterialSortKind.cs" />
+    <Compile Include="TaskPreferredNodes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseDBAccess\BaseDBAccess.csproj">
+      <Project>{34261adf-653f-4c4c-a024-9ffc5a63b573}</Project>
+      <Name>BaseDBAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{f62ab602-1c5d-4b9b-8eab-5e689f00507f}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

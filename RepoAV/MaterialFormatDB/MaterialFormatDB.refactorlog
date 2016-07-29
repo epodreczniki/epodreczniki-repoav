@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="3dce8e4f-37fd-4ef2-acb3-60be99f15eef" ChangeDateTime="06/27/2014 11:07:51">
+    <Property Name="ElementName" Value="[dbo].[ExecutedTask].[Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ExecutedTask]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TaskId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4bf52916-2cd2-425a-884c-a7939d4ea6d4" ChangeDateTime="06/27/2014 11:09:24">
+    <Property Name="ElementName" Value="[dbo].[ExecutedTask].[Details]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ExecutedTask]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Result" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3d63e734-19c1-4f66-9929-0dfc8704dbd4" ChangeDateTime="06/27/2014 11:10:18">
+    <Property Name="ElementName" Value="[dbo].[ExecutedTask].[CreationDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ExecutedTask]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TaskFinishDate" />
+  </Operation>
+</Operations>

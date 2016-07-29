@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>RepDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{7df8cbcb-7c38-4694-a0dd-6bc7dc245bb1}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>RepDB</RootNamespace>
+    <AssemblyName>RepDB</AssemblyName>
+    <ModelCollation>1045,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <DefaultCollation>Polish_100_CI_AS</DefaultCollation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Stored Procedures" />
+    <Folder Include="Tables" />
+    <Folder Include="Scripts" />
+    <Folder Include="Functions" />
+    <Folder Include="Security" />
+    <Folder Include="Security\Users" />
+    <Folder Include="Security\Logins" />
+    <Folder Include="Security\Roles" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Material.sql" />
+    <Build Include="Tables\MaterialType.sql" />
+    <Build Include="Tables\FormatGroup.sql" />
+    <Build Include="Tables\Profile.sql" />
+    <Build Include="Tables\Format.sql" />
+    <Build Include="Tables\FormatType.sql" />
+    <Build Include="Tables\FormatStatus.sql" />
+    <Build Include="Tables\FormatInternalStatus.sql" />
+    <Build Include="Tables\VideoStream.sql" />
+    <Build Include="Tables\AudioStream.sql" />
+    <Build Include="Tables\Task.sql" />
+    <Build Include="Tables\TaskStatus.sql" />
+    <Build Include="Tables\Node.sql" />
+    <Build Include="Tables\NodeRole.sql" />
+    <Build Include="Tables\Location.sql" />
+    <Build Include="Tables\TaskType.sql" />
+    <Build Include="Stored Procedures\AddMaterial.sql" />
+    <Build Include="Tables\TaskData.sql" />
+    <Build Include="Tables\GlobalData.sql" />
+    <Build Include="Stored Procedures\GetGlobalData.sql" />
+    <Build Include="Stored Procedures\SetGlobalData.sql" />
+    <Build Include="Stored Procedures\GetAllGlobalData.sql" />
+    <Build Include="Functions\fnctSplitString.sql" />
+    <Build Include="Stored Procedures\AddTask.sql" />
+    <Build Include="Stored Procedures\AddTaskData.sql" />
+    <Build Include="Stored Procedures\RemoveTask.sql" />
+    <Build Include="Stored Procedures\SetTaskStatus.sql" />
+    <Build Include="Stored Procedures\GetTasksCount.sql" />
+    <Build Include="Stored Procedures\GetTasks2Execute.sql" />
+    <Build Include="Stored Procedures\GetTask.sql" />
+    <Build Include="Stored Procedures\GetManagerTasks2Execute.sql" />
+    <Build Include="Stored Procedures\GetManagerTasks4ResultProcessing.sql" />
+    <Build Include="Stored Procedures\AddNode.sql" />
+    <Build Include="Stored Procedures\GetNode.sql" />
+    <Build Include="Stored Procedures\RemoveNode.sql" />
+    <Build Include="Stored Procedures\UpdateNodeCheckTime.sql" />
+    <Build Include="Stored Procedures\GetNodesInRole.sql" />
+    <Build Include="Stored Procedures\SetNodeRepositorySpace.sql" />
+    <Build Include="Stored Procedures\SetTaskResult.sql" />
+    <Build Include="Stored Procedures\SetTaskResultProcessed.sql" />
+    <Build Include="Stored Procedures\ChangeNode.sql" />
+    <Build Include="Stored Procedures\SetNodeEnabled.sql" />
+    <Build Include="Stored Procedures\GetTasksOfType.sql" />
+    <Build Include="Stored Procedures\GetTasksWithStatus.sql" />
+    <Build Include="Stored Procedures\AddProfile.sql" />
+    <Build Include="Stored Procedures\RemoveProfile.sql" />
+    <Build Include="Stored Procedures\ChangeProfile.sql" />
+    <Build Include="Stored Procedures\GetProfile.sql" />
+    <Build Include="Stored Procedures\RemoveMaterial.sql" />
+    <Build Include="Stored Procedures\ChangeMaterial.sql" />
+    <Build Include="Stored Procedures\GetMaterial.sql" />
+    <Build Include="Stored Procedures\FindMaterials.sql" />
+    <Build Include="Stored Procedures\SetMaterialAllowDistribution.sql" />
+    <Build Include="Stored Procedures\AddFormatGroup.sql" />
+    <Build Include="Stored Procedures\RemoveFormatGroup.sql" />
+    <Build Include="Stored Procedures\ChangeFormatGroup.sql" />
+    <Build Include="Stored Procedures\GetFormatGroup.sql" />
+    <Build Include="Stored Procedures\GetFormatGroups4Material.sql" />
+    <Build Include="Stored Procedures\AddFormat.sql" />
+    <Build Include="Stored Procedures\RemoveFormat.sql" />
+    <Build Include="Stored Procedures\ChangeFormat.sql" />
+    <Build Include="Stored Procedures\GetFormat.sql" />
+    <Build Include="Stored Procedures\GetFormatsFromSameMaterial.sql" />
+    <Build Include="Stored Procedures\GetFormats4Group.sql" />
+    <Build Include="Stored Procedures\SetFormatMetadata.sql" />
+    <Build Include="Stored Procedures\SetFormatStatus.sql" />
+    <Build Include="Stored Procedures\SetFormatInternalStatus.sql" />
+    <Build Include="Stored Procedures\AddFormatLocation.sql" />
+    <Build Include="Stored Procedures\GetFormatLocations.sql" />
+    <Build Include="Stored Procedures\GetFormats4Material.sql" />
+    <Build Include="Stored Procedures\FinishTask.sql" />
+    <Build Include="Stored Procedures\RenewTask.sql" />
+    <Build Include="Tables\ProfileGroup.sql" />
+    <Build Include="Stored Procedures\GetProfilesFromGroup.sql" />
+    <Build Include="Stored Procedures\GetAllProfileGroups.sql" />
+    <Build Include="Stored Procedures\AddProfileGroup.sql" />
+    <Build Include="Stored Procedures\ChangeProfileGroup.sql" />
+    <Build Include="Stored Procedures\RemoveProfileGroup.sql" />
+    <Build Include="Stored Procedures\SetProfileGroupEnabled.sql" />
+    <Build Include="Stored Procedures\GetProfilesWithGroups4MaterialType.sql" />
+    <Build Include="Stored Procedures\GetFormatsFromSameGroupAndProfile.sql" />
+    <Build Include="Stored Procedures\GetFormats4MaterialByGroup.sql" />
+    <Build Include="Stored Procedures\GetOperationXml4Profile.sql" />
+    <Build Include="Stored Procedures\GetContent4Tasks.sql" />
+    <Build Include="Stored Procedures\GetTasksOfTypeShort.sql" />
+    <Build Include="Tables\NodeProperties.sql" />
+    <Build Include="Stored Procedures\GetFormatLocationsExt.sql" />
+    <Build Include="Stored Procedures\GetSourceUrl4Format.sql" />
+    <Build Include="Functions\fnctBuildAccessUrl.sql" />
+    <Build Include="Tables\TaskPreferredNode.sql" />
+    <Build Include="Functions\fnctIsNodePreferred4Task.sql" />
+    <Build Include="Stored Procedures\UpdateTaskLastActivityDate.sql" />
+    <Build Include="Stored Procedures\GetTasksContent.sql" />
+    <Build Include="Functions\fnctGetNodePreferred4TaskAsString.sql" />
+    <Build Include="Stored Procedures\UpdateRepositoryFreeSpace4Node.sql" />
+    <Build Include="Tables\Mime2Extension.sql" />
+    <Build Include="Stored Procedures\GetFileExtension4Mime.sql" />
+    <Build Include="Stored Procedures\GetFileExtension4Profile.sql" />
+    <Build Include="Stored Procedures\RemoveFormatLocation.sql" />
+    <Build Include="Stored Procedures\GetProfiles4XML.sql" />
+    <Build Include="Functions\fnctGetFileExt4Mime.sql" />
+    <Build Include="Stored Procedures\GetMaterialStatus.sql" />
+    <Build Include="Stored Procedures\GetFormats4Sync.sql" />
+    <Build Include="Stored Procedures\SetFormatMetadataExt.sql" />
+    <Build Include="Functions\fnctIsNodeOnline.sql" />
+    <Build Include="Stored Procedures\GetFormats4WithInternalStatus.sql" />
+    <Build Include="Stored Procedures\GetTasksOfType4Format.sql" />
+    <Build Include="Stored Procedures\GetFormatsWithoutNumOfLocations.sql" />
+    <Build Include="Stored Procedures\GetAllMime2FileExt.sql" />
+    <Build Include="Stored Procedures\GetStatistics.sql" />
+    <Build Include="Functions\fnctGetMaterialStatus.sql" />
+    <Build Include="Stored Procedures\GetExtFormats4Material.sql" />
+    <Build Include="Stored Procedures\GetExtFormats4Group.sql" />
+    <Build Include="Stored Procedures\ChangeMaterial4Portal.sql" />
+    <Build Include="Functions\fnctGetFromatGroupName.sql" />
+    <Build Include="Stored Procedures\GetExtFormatGroups4Material.sql" />
+    <Build Include="Stored Procedures\GetExtMaterial.sql" />
+    <Build Include="Security\Users\User_App.sql" />
+    <Build Include="Security\Logins\Login.sql" />
+    <Build Include="Security\Roles\dbApp.sql" />
+    <Build Include="Stored Procedures\SetMaterialDeleted.sql" />
+    <Build Include="Stored Procedures\GetMaterial4Format.sql" />
+    <Build Include="Stored Procedures\SNodeStats.sql" />
+    <Build Include="Stored Procedures\MaterialStats.sql" />
+    <Build Include="Stored Procedures\FormatStats.sql" />
+    <Build Include="Stored Procedures\GetPreferredNodes4Tasks.sql" />
+    <Build Include="Stored Procedures\GetStatistics2.sql" />
+    <Build Include="Stored Procedures\GetMaterialInfo.sql" />
+    <Build Include="Tables\Tag2Material.sql" />
+    <Build Include="Functions\fnctGetTags4MaterialAsString.sql" />
+    <Build Include="Functions\fnctIsMaterialAvailable.sql" />
+    <Build Include="Stored Procedures\ShowTasks.sql" />
+    <Build Include="Stored Procedures\GetMaterials2Remove.sql" />
+    <Build Include="Stored Procedures\GetMaterialByMetadata.sql" />
+    <Build Include="Stored Procedures\GetMaterialByMetadataTime.sql" />
+    <Build Include="Functions\fnctConvertToDate.sql" />
+    <Build Include="Stored Procedures\RemoveOldTasks.sql" />
+    <Build Include="Stored Procedures\GetPublicIds4ChangedMaterialsSince.sql" />
+    <Build Include="Stored Procedures\RepeatTask_2.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RepDB_localDB.publish.xml" />
+  </ItemGroup>
+</Project>

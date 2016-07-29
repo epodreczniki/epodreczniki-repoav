@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfParameterSetInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ParameterSetInfo Name="RepoDBConnection">
+    <Value xsi:type="xsd:string">%RepoDBConnection%</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="MFDBConnection">
+    <Value xsi:type="xsd:string">%MFDBConnection%</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="NodeId">
+    <Value xsi:type="xsd:string">%NodeId%</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="StateUpdateProcedure">
+    <Value xsi:type="xsd:string">UpdateNodeCheckTime</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="StateUpdateDBConnection">
+    <Value xsi:type="xsd:string">%RepoDBConnection%</Value>
+  </ParameterSetInfo>
+</ArrayOfParameterSetInfo>
+
+

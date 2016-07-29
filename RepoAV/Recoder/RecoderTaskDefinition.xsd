@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio - FREE Community Edition 7.0.2.746 (http://www.liquid-technologies.com)-->
+<xs:schema xmlns:mstns="http://schemas.psnc.pl/Recoder/RecoderTaskDefinition/1.0" xmlns="http://schemas.psnc.pl/Recoder/RecoderTaskDefinition/1.0" elementFormDefault="qualified" targetNamespace="http://schemas.psnc.pl/Recoder/RecoderTaskDefinition/1.0" id="SubsystemsConfiguration" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="OperationDefinition">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="Name" type="xs:string" use="required" />
+        <xs:attribute default="0" name="Skip" type="xs:boolean" />
+        <xs:attribute name="SkipResult" type="SkipResults" use="optional" />
+        <xs:attribute name="Type" type="OperationType" use="required" />
+        <xs:attribute name="OnSuccess" type="xs:string" use="optional" />
+        <xs:attribute name="OnFailure" type="xs:string" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="SkipResults">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Failure" />
+      <xs:enumeration value="StopExecutionWithSuccess" />
+      <xs:enumeration value="StopExecutionWithFailure" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OperationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CmdLine" />
+      <xs:enumeration value="AssemblyClass" />
+      <xs:enumeration value="ExternalRecoderTask" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TaskDefinition">
+    <xs:sequence>
+      <xs:element name="Operations" type="OperationCollection" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="StartOperation" type="xs:string" />
+    <xs:attribute default="3600" name="ExecutionTimeout" type="xs:int" />
+  </xs:complexType>
+  <xs:complexType name="TaskCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Task" type="TaskDefinition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OperationCollection">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="Operation" type="OperationDefinition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tasks" type="TaskCollection" />
+</xs:schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfParameterSetInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ParameterSetInfo Name="CleaningInterval">
+    <Value xsi:type="xsd:int">600</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="TempDirectoryPath">
+    <Value xsi:type="xsd:string">%TempDirectoryPath%</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="ToolsDirectoryPath">
+    <Value xsi:type="xsd:string">%ToolsDirectoryPath%</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="ExecutingThreadsCount">
+    <Value xsi:type="xsd:int">5</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="MaxTimeOfWorkingThreadExecution">
+    <Value xsi:type="xsd:int">600</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="MaxNewTasksCount">
+    <Value xsi:type="xsd:int">5</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="Checking4NewTasksInterval">
+    <Value xsi:type="xsd:int">10</Value>
+  </ParameterSetInfo>
+</ArrayOfParameterSetInfo>

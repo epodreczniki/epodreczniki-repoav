@@ -1,0 +1,39 @@
+using System;
+namespace MediaInfoWrapper
+{
+	public enum Menuinfo
+	{
+		Count,
+		StreamCount,
+		StreamKind,
+		StreamKindID,
+		Inform,
+		ID,
+		UniqueID,
+		Codec,
+		Codec__String,
+		Codec__Family,
+		Codec__Info,
+		Codec__Url,
+		Codec_Profile,
+		Codec_Settings,
+		Codec_Settings_Automatic,
+		BitRate,
+		BitRate__String,
+		BitRate_Mode,
+		Width,
+		Height,
+		AspectRatio,
+		AspectRatio__String,
+		FrameRate,
+		FrameRate__String,
+		Standard,
+		Resolution,
+		Title,
+		Encoded_Library,
+		Encoded_Library_Settings,
+		Language,
+		Language__String,
+		Language_More
+	}
+}

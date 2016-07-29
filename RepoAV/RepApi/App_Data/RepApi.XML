@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RepApi</name>
+    </assembly>
+    <members>
+        <member name="T:PSNC.RepoAV.Services.RepApi.Controllers.GetEncodingProfilesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PSNC.RepoAV.Services.RepApi.Controllers.GetEncodingProfilesController.Get">
+            <summary>
+            Pobiera profile kodowania materiałów.
+            </summary>
+            <returns>XML zgodny ze schematem http://schemas.psnc.pl/media-metadata/Repository/1.0 zawierający listę profili.</returns>
+        </member>
+        <member name="T:PSNC.RepoAV.Services.RepApi.Controllers.GetStatusController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PSNC.RepoAV.Services.RepApi.Controllers.GetStatusController.Get(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PSNC.RepoAV.Services.RepApi.Controllers.RemoveMaterialController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PSNC.RepoAV.Services.RepApi.Controllers.RemoveMaterialController.Delete(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="materialId"></param>
+        </member>
+        <member name="T:PSNC.RepoAV.Services.RepApi.Controllers.UpdateMaterialController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PSNC.RepoAV.Services.RepApi.Controllers.UpdateMaterialController.Put(PSNC.RepoAV.Services.RepApi.Models.SetMaterialReq)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PSNC.RepoAV.Services.RepApi.Helper.IsSharedDir(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="subsystemName"></param>
+            <param name="interfaceName"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

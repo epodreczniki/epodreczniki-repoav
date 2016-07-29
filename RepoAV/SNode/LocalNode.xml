@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfParameterSetInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+  <ParameterSetInfo Name="MFDBConnection">
+    <Value xsi:type="xsd:string">Data Source=(LocalDB)\v11.0;Persist Security Info=True;Integrated Security=SSPI;Initial Catalog=MaterialFormatDB_1</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="RepoDBConnection">
+    <Value xsi:type="xsd:string">Data Source=(LocalDB)\v11.0;Persist Security Info=True;Integrated Security=SSPI;Initial Catalog=RepDB</Value>
+  </ParameterSetInfo> 
+  <ParameterSetInfo Name="NodeId">
+    <Value xsi:type="xsd:string">1</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="StateUpdateProcedure">
+    <Value xsi:type="xsd:string">UpdateNodeCheckTime</Value>
+  </ParameterSetInfo>
+  <ParameterSetInfo Name="StateUpdateDBConnection">
+	<Value xsi:type="xsd:string">Data Source=(LocalDB)\v11.0;Persist Security Info=True;Integrated Security=SSPI;Initial Catalog=RepDB</Value>
+  </ParameterSetInfo>
+</ArrayOfParameterSetInfo>

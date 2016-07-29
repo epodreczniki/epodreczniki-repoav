@@ -1,0 +1,418 @@
+[2014-11-24 09:51:41.7134]
+[Error][General] GetEncodingProfilesController: 
+Exception Description:
+	Błąd podczas wykonania procedury: dbo.GetAllProfileGroups.
+
+	Cannot open database "RepDB" requested by the login. The login failed.
+Login failed for user 'POPPY\cecko'.
+StackTrace:
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PSNC.RepoAV.DBAccess.SqlHelper..ctor(String ConnectionString) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\SqlHelper.cs:line 63
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.ExecuteReaderToList[T](String storedProcedureName, SqlParameter[] pars, Boolean takeReturnValue, ErrorType& et, RangeSelector range) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 731
+
+[2014-11-24 09:52:06.7678]
+[Error][General] GetEncodingProfilesController: 
+Exception Description:
+	Błąd podczas wykonania procedury: dbo.GetAllProfileGroups.
+
+	Cannot open database "RepDB" requested by the login. The login failed.
+Login failed for user 'POPPY\cecko'.
+StackTrace:
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PSNC.RepoAV.DBAccess.SqlHelper..ctor(String ConnectionString) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\SqlHelper.cs:line 63
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.ExecuteReaderToList[T](String storedProcedureName, SqlParameter[] pars, Boolean takeReturnValue, ErrorType& et, RangeSelector range) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 731
+
+[2014-11-24 09:53:45.6844]
+[Error][General] GetEncodingProfilesController: 
+Exception Description:
+	Błąd podczas wykonania procedury: dbo.GetAllProfileGroups.
+
+	Cannot open database "RepDB" requested by the login. The login failed.
+Login failed for user 'POPPY\cecko'.
+StackTrace:
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at PSNC.RepoAV.DBAccess.SqlHelper..ctor(String ConnectionString) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\SqlHelper.cs:line 63
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.ExecuteReaderToList[T](String storedProcedureName, SqlParameter[] pars, Boolean takeReturnValue, ErrorType& et, RangeSelector range) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 731
+
+[2014-12-05 10:47:59.4385]
+[Error][General] GetEncodingProfilesController: 
+Exception Description:
+	Prefix "xmlns" is reserved for use by XML.
+StackTrace:
+   at System.Xml.XmlNamespaceManager.AddNamespace(String prefix, String uri)
+   at PSNC.RepoAV.Services.RepApi.Controllers.GetEncodingProfilesController.Get() in i:\_Projects\RepoAV\RepoAV\RepApi\Controllers\GetEncodingProfilesController.cs:line 40
+
+[2014-12-05 12:28:19.0371]
+[Information][General] GetStatus dla materiału s
+
+[2014-12-05 12:28:19.0701]
+[Error][General] GetStatus: 
+Exception Description:
+	Nie istnieje materiał o publicznym Id=s.
+StackTrace:
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.OnErrorReport(Exception ex, ErrorType errorCode, String message) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 118
+   at PSNC.RepoAV.RepDBAccess.RepDBAccess.GetMaterialStatus(String publicId) in i:\_Projects\RepoAV\RepoAV\RepDBAccess\RepDBAccess_Material.cs:line 320
+   at PSNC.RepoAV.Services.RepApi.Controllers.GetStatusController.Get(String id) in i:\_Projects\RepoAV\RepoAV\RepApi\Controllers\GetStatusController.cs:line 40
+
+[2014-12-05 12:29:08.4599]
+[Information][General] GetStatus dla materiału s
+
+[2014-12-05 12:29:08.4619]
+[Error][General] GetStatus: 
+Exception Description:
+	Nie istnieje materiał o publicznym Id=s.
+StackTrace:
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.OnErrorReport(Exception ex, ErrorType errorCode, String message) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 118
+   at PSNC.RepoAV.RepDBAccess.RepDBAccess.GetMaterialStatus(String publicId) in i:\_Projects\RepoAV\RepoAV\RepDBAccess\RepDBAccess_Material.cs:line 320
+   at PSNC.RepoAV.Services.RepApi.Controllers.GetStatusController.Get(String id) in i:\_Projects\RepoAV\RepoAV\RepApi\Controllers\GetStatusController.cs:line 40
+
+[2014-12-05 12:29:32.7606]
+[Information][General] GetStatus dla materiału s
+
+[2014-12-05 12:31:15.2468]
+[Information][General] GetStatus dla materiału s
+
+[2014-12-05 12:31:15.2689]
+[Error][General] GetStatus: 
+Exception Description:
+	Nie istnieje materiał o publicznym Id=s.
+StackTrace:
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.OnErrorReport(Exception ex, ErrorType errorCode, String message) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 118
+   at PSNC.RepoAV.RepDBAccess.RepDBAccess.GetMaterialStatus(String publicId) in i:\_Projects\RepoAV\RepoAV\RepDBAccess\RepDBAccess_Material.cs:line 320
+   at PSNC.RepoAV.Services.RepApi.Controllers.GetStatusController.Get(String id) in i:\_Projects\RepoAV\RepoAV\RepApi\Controllers\GetStatusController.cs:line 40
+
+[2014-12-05 12:34:27.2182]
+[Information][General] GetStatus dla materiału s
+
+[2014-12-05 13:21:14.6912]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 13:21:14.7072]
+[Error][General] GetStatus: 
+Exception Description:
+	Nie istnieje material o PId = startrek3.
+StackTrace:
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.OnErrorReport(Exception ex, ErrorType errorCode, String message) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 118
+   at PSNC.RepoAV.RepDBAccess.RepDBAccess.GetFormats4Material(String publicId) in i:\_Projects\RepoAV\RepoAV\RepDBAccess\RepDBAccess_Format.cs:line 285
+   at PSNC.RepoAV.Services.RepApi.Controllers.GetMaterialFormatsController.Get(String id) in i:\_Projects\RepoAV\RepoAV\RepApi\Controllers\GetMaterialFormatsController.cs:line 31
+
+[2014-12-05 13:21:19.4802]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 13:21:19.4822]
+[Error][General] GetStatus: 
+Exception Description:
+	Nie istnieje material o PId = startrek3.
+StackTrace:
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.OnErrorReport(Exception ex, ErrorType errorCode, String message) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 118
+   at PSNC.RepoAV.RepDBAccess.RepDBAccess.GetFormats4Material(String publicId) in i:\_Projects\RepoAV\RepoAV\RepDBAccess\RepDBAccess_Format.cs:line 285
+   at PSNC.RepoAV.Services.RepApi.Controllers.GetMaterialFormatsController.Get(String id) in i:\_Projects\RepoAV\RepoAV\RepApi\Controllers\GetMaterialFormatsController.cs:line 31
+
+[2014-12-05 13:21:28.6720]
+[Information][General] GetMaterialFormats dla materiału startrek_3
+
+[2014-12-05 13:21:28.6731]
+[Error][General] GetStatus: 
+Exception Description:
+	Nie istnieje material o PId = startrek_3.
+StackTrace:
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.OnErrorReport(Exception ex, ErrorType errorCode, String message) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 118
+   at PSNC.RepoAV.RepDBAccess.RepDBAccess.GetFormats4Material(String publicId) in i:\_Projects\RepoAV\RepoAV\RepDBAccess\RepDBAccess_Format.cs:line 285
+   at PSNC.RepoAV.Services.RepApi.Controllers.GetMaterialFormatsController.Get(String id) in i:\_Projects\RepoAV\RepoAV\RepApi\Controllers\GetMaterialFormatsController.cs:line 31
+
+[2014-12-05 13:58:28.2500]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 13:58:28.2650]
+[Error][General] GetStatus: 
+Exception Description:
+	Nie istnieje material o PId = startrek3.
+StackTrace:
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.OnErrorReport(Exception ex, ErrorType errorCode, String message) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 118
+   at PSNC.RepoAV.RepDBAccess.RepDBAccess.GetFormats4Material(String publicId) in i:\_Projects\RepoAV\RepoAV\RepDBAccess\RepDBAccess_Format.cs:line 285
+   at PSNC.RepoAV.Services.RepApi.Controllers.GetMaterialFormatsController.Get(String id) in i:\_Projects\RepoAV\RepoAV\RepApi\Controllers\GetMaterialFormatsController.cs:line 37
+
+[2014-12-05 14:01:03.4105]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 14:02:14.1152]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 14:16:54.2992]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 14:18:55.2573]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 14:19:52.3083]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 14:24:09.7726]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 14:24:09.7976]
+[Error][General] GetStatus: 
+Exception Description:
+	Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details.
+StackTrace:
+   at PSNC.RepoAV.Services.RepApi.Controllers.GetMaterialFormatsController.Get(String id) in i:\_Projects\RepoAV\RepoAV\RepApi\Controllers\GetMaterialFormatsController.cs:line 47
+
+[2014-12-05 14:24:27.3316]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 14:25:25.7424]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 14:25:37.6192]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2014-12-05 14:35:42.6427]
+[Information][General] GetMaterialFormats dla materiału startrek3
+
+[2015-09-11 14:02:56.9267]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:02:56.9627]
+[Error][General] Element/Metadata: 
+Exception Description:
+	Błąd podczas wykonania procedury: dbo.GetMaterial.
+  CreatedDate = NULL
+  ModifyDate = NULL
+  Status = NULL
+  PublicId = 31_1441174200000
+  Tags = NULL
+  Id = NULL
+  Duration = NULL
+  Title = NULL
+  AllowDistribution = NULL
+  Deleted = NULL
+  MaterialType = NULL
+  Metadata = NULL
+
+	Procedure or function GetMaterial has too many arguments specified.
+StackTrace:
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PSNC.RepoAV.DBAccess.SqlHelper.ExecuteNonQuery(String storedProcedureName) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\SqlHelper.cs:line 130
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.ExecuteNonQuery(String storedProcedureName, SqlParameter[] pars, Boolean takeReturnValue, ErrorType& et) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 898
+
+[2015-09-11 14:04:17.7446]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:04:28.5832]
+[Error][General] Element/Metadata: 
+Exception Description:
+	Błąd podczas wykonania procedury: dbo.GetMaterial.
+  CreatedDate = NULL
+  ModifyDate = NULL
+  Status = NULL
+  PublicId = 31_1441174200000
+  Tags = NULL
+  Id = NULL
+  Duration = NULL
+  Title = NULL
+  AllowDistribution = NULL
+  Deleted = NULL
+  MaterialType = NULL
+  Metadata = NULL
+
+	Procedure or function GetMaterial has too many arguments specified.
+StackTrace:
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PSNC.RepoAV.DBAccess.SqlHelper.ExecuteNonQuery(String storedProcedureName) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\SqlHelper.cs:line 130
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.ExecuteNonQuery(String storedProcedureName, SqlParameter[] pars, Boolean takeReturnValue, ErrorType& et) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 900
+
+[2015-09-11 14:04:39.0755]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:06:42.3984]
+[Error][General] Element/Metadata: 
+Exception Description:
+	Błąd podczas wykonania procedury: dbo.GetMaterial.
+  CreatedDate = NULL
+  ModifyDate = NULL
+  Status = NULL
+  PublicId = 31_1441174200000
+  Tags = NULL
+  Id = NULL
+  Duration = NULL
+  Title = NULL
+  AllowDistribution = NULL
+  Deleted = NULL
+  MaterialType = NULL
+  Metadata = NULL
+
+	Procedure or function GetMaterial has too many arguments specified.
+StackTrace:
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PSNC.RepoAV.DBAccess.SqlHelper.ExecuteNonQuery(String storedProcedureName) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\SqlHelper.cs:line 130
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.ExecuteNonQuery(String storedProcedureName, SqlParameter[] pars, Boolean takeReturnValue, ErrorType& et) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 900
+
+[2015-09-11 14:06:46.4226]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:09:57.8171]
+[Error][General] Element/Metadata: 
+Exception Description:
+	Błąd podczas wykonania procedury: dbo.GetMaterial.
+  CreatedDate = NULL
+  ModifyDate = NULL
+  Status = NULL
+  PublicId = 31_1441174200000
+  Tags = NULL
+  Id = NULL
+  Duration = NULL
+  Title = NULL
+  AllowDistribution = NULL
+  Deleted = NULL
+  MaterialType = NULL
+  Metadata = NULL
+
+	Procedure or function GetMaterial has too many arguments specified.
+StackTrace:
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at PSNC.RepoAV.DBAccess.SqlHelper.ExecuteNonQuery(String storedProcedureName) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\SqlHelper.cs:line 130
+   at PSNC.RepoAV.DBAccess.BaseDBAccess.ExecuteNonQuery(String storedProcedureName, SqlParameter[] pars, Boolean takeReturnValue, ErrorType& et) in i:\_Projects\RepoAV\RepoAV\BaseDBAccess\BaseDBAccess.cs:line 900
+
+[2015-09-11 14:10:01.0897]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:12:47.0058]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:13:37.0022]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:14:26.3723]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:15:20.6677]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:17:14.0505]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:17:46.8543]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:17:58.9538]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:22:54.1593]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:23:16.4687]
+[Information][General] Element/Metadata dla materiału 31_1441174200000
+
+[2015-09-11 14:33:30.8480]
+[Information][General] Element/Get dla materiału 31_14411
+
+[2015-09-11 14:33:36.2321]
+[Information][General] Element/Get dla materiału 31_14411
+
+[2015-09-24 15:25:39.1730]
+[Information][General] GetMaterialFormats dla materiału 31_1441782900000
+
+[2015-09-24 15:26:13.4186]
+[Information][General] GetMaterialFormats dla materiału 31_1441782900000
+
+[2015-09-24 15:27:05.3593]
+[Information][General] GetMaterialFormats dla materiału 31_1441174200000
+
+[2015-09-24 15:44:22.7326]
+[Information][General] GetMaterialFormats dla materiału 31_1441782900000
+
+[2015-09-24 15:45:18.7593]
+[Information][General] GetMaterialFormats dla materiału 31_1441782900000
+

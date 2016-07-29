@@ -1,0 +1,9 @@
+﻿CREATE USER [App] FOR LOGIN [App] WITH DEFAULT_SCHEMA = dbo
+GO
+
+GRANT CONNECT TO [App]
+GO
+
+
+
+
